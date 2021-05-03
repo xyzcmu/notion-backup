@@ -1,0 +1,5 @@
+name: "backup-notion"
+description: "backup notion and relese it to the github"
+runs:
+  using: "node12"
+  main: "dist/index.js"

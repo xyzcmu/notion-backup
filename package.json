@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "ncc build backup-notion/index.js -o backup-notion/dist"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.4"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
