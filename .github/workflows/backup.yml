@@ -44,6 +44,7 @@ jobs:
           https://api.github.com/repos/xyzcmu/notion-backup/releases
         env:
           token: ${{github.token}}
+
       - name: generate releases-id-tag.txt
         if: steps.isRlease.outputs.result == 'true'
         id: rls-id-tag
@@ -88,7 +89,7 @@ jobs:
           token: ${{github.token}}
       
       - name: retain three releases-id-tag
-        if: steps.isRlease.outputs.result == 'true' && steps.rls-id-tag.rls_total > 2
+        if: steps.isRlease.outputs.result == 'true' && steps.rls-id-tag.rls_total > 3
         run: |
           tail -n +4 releases-id-tag.txt > del-releases-id-tag.txt
           while read rls_id
