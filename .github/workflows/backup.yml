@@ -35,7 +35,7 @@ jobs:
         run: |
           cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
           tag=$(date +"%Y%m%d.%H.%M.%S")
-          data='{"tag_name": '"\"v${tag}\", "'"body": "the same as title...", "name": "notion-notes"}'
+          data='{"tag_name": '"\"v${tag}\", "'"body": "the password for decrypting see privat repo named private or see google doc", "name": "notion-notes"}'
           curl \
           -X POST \
           -H "Authorization: Bearer $token" \
