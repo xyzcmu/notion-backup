@@ -83,14 +83,13 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           --data-binary @markdown.zip.enc \
           ${des_url2}
-
           rm html.zip.enc markdown.zip.enc
         env:
           passwd: ${{secrets.ENC_PASSWD}}
           token: ${{github.token}}
       
       - name: retain three releases-id-tag
-        if: steps.isRlease.outputs.result == 'true' && steps.rls-id-tag.rls_total > 3
+        if: ${{steps.isRlease.outputs.result == 'true' && steps.rls-id-tag.outputs.rls_total > 3}}
         run: |
           tail -n +4 releases-id-tag.txt > del-releases-id-tag.txt
           while read rls_id
