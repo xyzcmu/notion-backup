@@ -56,9 +56,9 @@ jobs:
           https://api.github.com/repos/xyzcmu/notion-backup/releases | \
           jq '.[]|"\(.id) \(.tag_name)"' | tr -d \" \
           > releases-id-tag.txt
-          lines=$(cat releases-id-tag.txt | wc -l)
-          echo "releases total: ${lines}"
-          echo "::set-output name=rls_total::${lines}"
+          total=$(cat releases-id-tag.txt | wc -l)
+          echo "====== releases total: ${total} ======"
+          echo "::set-output name=rls_total::${total}"
 
       - name: encrypt and upload assets to latest-release
         if: steps.isRlease.outputs.result == 'true'
@@ -89,14 +89,14 @@ jobs:
           token: ${{github.token}}
       
       - name: retain three releases-id-tag
-        if: ${{steps.isRlease.outputs.result == 'true' && steps.rls-id-tag.outputs.rls_total > 3}}
+        if: ${{steps.rls-id-tag.outputs.rls_total > 3}}
         run: |
           tail -n +4 releases-id-tag.txt > del-releases-id-tag.txt
           while read rls_id
           do
           sleep 1s
           des_url="https://api.github.com/repos/xyzcmu/notion-backup/releases/${rls_id}"
-          curl \
+          curl -s \
           -X DELETE \
           -H "Authorization: Bearer $token" \
           -H "Accept: application/vnd.github.v3+json" \
@@ -108,7 +108,7 @@ jobs:
           do
           sleep 1s
           des_url="https://api.github.com/repos/xyzcmu/notion-backup/git/refs/tags/${rls_tag}"
-          curl \
+          curl -s \
           -X DELETE \
           -H "Authorization: Bearer $token" \
           -H "Accept: application/vnd.github.v3+json" \
