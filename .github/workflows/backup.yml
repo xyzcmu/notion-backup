@@ -57,7 +57,7 @@ jobs:
           jq '.[]|"\(.id) \(.tag_name)"' | tr -d \" \
           > releases-id-tag.txt
           total=$(cat releases-id-tag.txt | wc -l)
-          echo "====== releases total: ${total} ======"
+          echo "<====== releases total: ${total} ======>"
           echo "::set-output name=rls_total::${total}"
 
       - name: encrypt and upload assets to latest-release
