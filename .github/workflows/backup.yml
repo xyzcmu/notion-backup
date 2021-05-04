@@ -57,7 +57,7 @@ jobs:
           jq '.[]|"\(.id) \(.tag_name)"' | tr -d \" \
           > releases-id-tag.txt
           lines=$(cat releases-id-tag.txt | wc -l)
-          echo "rls total: ${lines}"
+          echo "releases total: ${lines}"
           echo "::set-output name=rls_total::${lines}"
 
       - name: encrypt and upload assets to latest-release
@@ -96,24 +96,24 @@ jobs:
           do
           sleep 1s
           des_url="https://api.github.com/repos/xyzcmu/notion-backup/releases/${rls_id}"
-          echo ${des_url}
           curl \
           -X DELETE \
           -H "Authorization: Bearer $token" \
           -H "Accept: application/vnd.github.v3+json" \
           ${des_url}
+          echo "release-id: ${rls_id} deleted"
           done <<< $(cat del-releases-id-tag.txt | awk '{print $1}')
           
           while read rls_tag
           do
           sleep 1s
           des_url="https://api.github.com/repos/xyzcmu/notion-backup/git/refs/tags/${rls_tag}"
-          echo "del-tag is ${des_url}"
           curl \
           -X DELETE \
           -H "Authorization: Bearer $token" \
           -H "Accept: application/vnd.github.v3+json" \
           ${des_url}
+          echo "tag: ${rls_tag} deleted"
           done <<< $(cat del-releases-id-tag.txt | awk '{print $2}')
         env:
           token: ${{github.token}}
