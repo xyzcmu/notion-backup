@@ -48,3 +48,109 @@ jobs:
           git add .
           git commit -m "Automated snapshot"
           git push
+
+      - name: release or not
+        id: isRlease
+        run: |
+          pre_size=$(cat notes-size.txt || echo 0)
+          cur_size=$(stat html.zip | awk '$0~/Size/{print $2}')
+          if [[ $cur_size -ne $pre_size ]];then
+          echo "result=true" >> $GITHUB_OUTPUT
+          else 
+          echo "result=false" >> $GITHUB_OUTPUT
+          fi
+          echo $cur_size > notes-size.txt
+      - name: create a release
+        if: steps.isRlease.outputs.result == 'true'
+        run: |
+          cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+          tag=$(date +"%Y%m%d.%H.%M.%S")
+          data='{"tag_name": '"\"v${tag}\", "'"body": "the password for decrypting see privat repo named private or see google doc", "name": "notion-notes"}'
+          curl \
+          -X POST \
+          -H "Authorization: Bearer $token" \
+          -H "Accept: application/vnd.github.v3+json" \
+          -d "$data" \
+          https://api.github.com/repos/xyzcmu/notion-backup/releases
+        env:
+          token: ${{github.token}}
+
+      - name: generate releases-id-tag.txt
+        if: steps.isRlease.outputs.result == 'true'
+        id: rls-id-tag
+        run: |
+          sudo apt-get update
+          sudo apt-get install jq &&
+          curl -s \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/xyzcmu/notion-backup/releases | \
+          jq '.[]|"\(.id) \(.tag_name)"' | tr -d \" \
+          > releases-id-tag.txt
+          total=$(cat releases-id-tag.txt | wc -l)
+          echo "<====== releases total: ${total} ======>"
+          echo "rls_total=${total}" >> $GITHUB_OUTPUT
+      - name: encrypt and upload assets to latest-release
+        if: steps.isRlease.outputs.result == 'true'
+        run: |
+          openssl enc -aes-256-cbc -salt -in html.zip -out html.zip.enc -pbkdf2 -k $passwd
+          openssl enc -aes-256-cbc -salt -in markdown.zip -out markdown.zip.enc -pbkdf2 -k $passwd
+          latest_release="$(cat releases-id-tag.txt | head -1 | awk '{print $1}')"
+          des_url1="https://uploads.github.com/repos/xyzcmu/notion-backup/releases/${latest_release}/assets?name=html.zip.enc"
+          curl \
+          -X POST \
+          -H "Authorization: Bearer $token" \
+          -H "content-type: application/octet-stream" \
+          -H "Accept: application/vnd.github.v3+json" \
+          --data-binary @html.zip.enc \
+          ${des_url1}
+          des_url2="https://uploads.github.com/repos/xyzcmu/notion-backup/releases/${latest_release}/assets?name=markdown.zip.enc"
+          curl \
+          -X POST \
+          -H "Authorization: Bearer $token" \
+          -H "content-type: application/octet-stream" \
+          -H "Accept: application/vnd.github.v3+json" \
+          --data-binary @markdown.zip.enc \
+          ${des_url2}
+          rm html.zip.enc markdown.zip.enc
+        env:
+          passwd: ${{secrets.ENC_PASSWD}}
+          token: ${{github.token}}
+      
+      - name: retain three releases-id-tag
+        if: ${{steps.rls-id-tag.outputs.rls_total > 3}}
+        run: |
+          tail -n +4 releases-id-tag.txt > del-releases-id-tag.txt
+          while read rls_id
+          do
+          sleep 1s
+          des_url="https://api.github.com/repos/xyzcmu/notion-backup/releases/${rls_id}"
+          curl -s \
+          -X DELETE \
+          -H "Authorization: Bearer $token" \
+          -H "Accept: application/vnd.github.v3+json" \
+          ${des_url}
+          echo "release-id: ${rls_id} deleted"
+          done <<< $(cat del-releases-id-tag.txt | awk '{print $1}')
+          
+          while read rls_tag
+          do
+          sleep 1s
+          des_url="https://api.github.com/repos/xyzcmu/notion-backup/git/refs/tags/${rls_tag}"
+          curl -s \
+          -X DELETE \
+          -H "Authorization: Bearer $token" \
+          -H "Accept: application/vnd.github.v3+json" \
+          ${des_url}
+          echo "tag: ${rls_tag} deleted"
+          done <<< $(cat del-releases-id-tag.txt | awk '{print $2}')
+        env:
+          token: ${{github.token}}
+
+      - name: clean
+        run: |
+             rm -f html.zip markdown.zip \
+             releases-id-tag.txt del-releases-id-tag.txt
+      - name: auto-commit
+        uses: elstudio/actions-js-build/commit@v4
+        with:
+          commitMessage: update notes-size.txt
