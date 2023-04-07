@@ -26,7 +26,7 @@ jobs:
         run: rm -rf markdown html *.zip
 
       - name: Run backup
-        run: ./notion-backup
+        uses: ./notion-backup
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_FILE_TOKEN: ${{ secrets.NOTION_FILE_TOKEN }}
