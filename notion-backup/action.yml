@@ -1,0 +1,5 @@
+name: "backup-notionWAHA"
+description: "backup notion and relese it to the github"
+runs:
+  using: "node16"
+  main: "index.js"
