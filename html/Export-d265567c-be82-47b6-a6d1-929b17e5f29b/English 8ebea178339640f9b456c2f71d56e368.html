@@ -1,0 +1,674 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>English</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8ebea178-3396-40f9-b456-c2f71d56e368" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1534211698458-e2be12c1a94c?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📙</span></div><h1 class="page-title">English</h1></header><div class="page-body"><p id="a1064d6e-2ad4-408f-9958-3dbad4d303a3" class="">
+</p><hr id="5e25b8a8-70a0-46aa-9a4c-b6e457334982"/><div id="f359326f-e9cc-483b-a789-a5973dff580e" class="collection-content"><h4 class="collection-title">知识收集</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Date</th><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Update</th><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesCreatedBy"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 10.4229C6.05176 10.4229 4.54785 11.1133 3.83008 11.9131C2.90039 10.9082 2.33301 9.55469 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 9.55469 13.1064 10.9082 12.1699 11.9131C11.4521 11.1133 9.94824 10.4229 8 10.4229ZM8 9.30176C9.32617 9.30859 10.3516 8.18066 10.3516 6.71094C10.3516 5.33008 9.31934 4.18164 8 4.18164C6.6875 4.18164 5.6416 5.33008 5.64844 6.71094C5.65527 8.18066 6.68066 9.28809 8 9.30176Z"></path></svg></span>Author</th></tr></thead><tbody><tr id="c8bd9f17-ad6c-4469-bf24-f34df4be90dd"><td class="cell-title"><a href="English%208ebea178339640f9b456c2f71d56e368/%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86%20f359326fe9cc483ba789a5973dff580e/%E9%9D%9E%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D%20c8bd9f17ad6c4469bf24f34df4be90dd.html">非谓语动词</a></td><td class="cell-Xzbi"><span class="selected-value select-value-color-orange">grammar</span></td><td class="cell-RGSF"><time>@April 6, 2021 10:35 PM</time></td><td class="cell-Evni"><time>@April 13, 2021 7:08 AM</time></td><td class="cell-M&lt;NY"><span class="user"><img src="English%208ebea178339640f9b456c2f71d56e368/%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86%20f359326fe9cc483ba789a5973dff580e/%E9%9D%9E%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D%20c8bd9f17ad6c4469bf24f34df4be90dd/logo2.png" class="icon user-icon"/>rhythm cello</span></td></tr><tr id="fcb0ae96-115e-4f33-9cc8-1e476a89931c"><td class="cell-title"><a href="English%208ebea178339640f9b456c2f71d56e368/%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86%20f359326fe9cc483ba789a5973dff580e/stative%20verbs%20fcb0ae96115e4f339cc81e476a89931c.html">stative verbs</a></td><td class="cell-Xzbi"><span class="selected-value select-value-color-orange">grammar</span></td><td class="cell-RGSF"><time>@April 19, 2021 11:02 PM</time></td><td class="cell-Evni"><time>@April 20, 2021 10:38 PM</time></td><td class="cell-M&lt;NY"><span class="user"><img src="English%208ebea178339640f9b456c2f71d56e368/%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86%20f359326fe9cc483ba789a5973dff580e/%E9%9D%9E%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D%20c8bd9f17ad6c4469bf24f34df4be90dd/logo2.png" class="icon user-icon"/>rhythm cello</span></td></tr><tr id="387e9ea3-412b-45c4-805d-fddaafb321cf"><td class="cell-title"><a href="English%208ebea178339640f9b456c2f71d56e368/%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86%20f359326fe9cc483ba789a5973dff580e/would%20387e9ea3412b45c4805dfddaafb321cf.html">would</a></td><td class="cell-Xzbi"></td><td class="cell-RGSF"><time>@July 3, 2021 12:02 AM</time></td><td class="cell-Evni"><time>@July 8, 2021 11:26 AM</time></td><td class="cell-M&lt;NY"><span class="user"><img src="English%208ebea178339640f9b456c2f71d56e368/%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86%20f359326fe9cc483ba789a5973dff580e/%E9%9D%9E%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D%20c8bd9f17ad6c4469bf24f34df4be90dd/logo2.png" class="icon user-icon"/>rhythm cello</span></td></tr></tbody></table></div><hr id="2a1ce35d-0884-49fe-b366-9df2cae80e5f"/><h1 id="fff152dc-f128-4cff-aff8-fee05d672c5f" class="block-color-gray_background">Misc</h1><div id="c509eea3-31f1-488c-9cf1-38cd5d1d7fbd" class="column-list"><div id="0992382a-123c-4b4a-ba22-b3f4a939f270" style="width:31.25%" class="column"><h2 id="977104b5-2d8a-451f-8c93-d0ed2f136580" class="block-color-orange_background">one</h2><ul id="7b68cbc9-24a8-4357-be91-d2532112e9c4" class="block-color-gray_background toggle"><li><details open=""><summary>prior</summary><ul id="520a8792-2871-4698-b295-2421d5cb5d20" class="bulleted-list"><li style="list-style-type:disc">adj, 先前的; 前面的<p id="cce10719-9891-4cb1-bd91-4bcb3fcdbae4" class="">e.g.</p><p id="0939902d-7fd8-485b-bd77-a2c76b7ce835" class="">Any commits you made prior to changing your commit email address are still associated with your previous email address.</p><p id="a0c91324-2e59-496d-9ebd-818f13a9aa28" class="">这里的 prior to 相当于 before</p></li></ul><ul id="86d33ccb-c23a-490c-b18d-be443e8de5f3" class="bulleted-list"><li style="list-style-type:disc">n, 院长; 会长</li></ul></details></li></ul><ul id="5268c48e-105b-4895-acdb-a1b882657cfb" class="block-color-gray_background toggle"><li><details open=""><summary>porcelain</summary><p id="72087b4b-9aa1-4a57-ab7a-a276a2ff6535" class="">/ˈpɔːsəlɪn/ </p><p id="929eda35-0ce2-4772-bedc-912f76b069fb" class="">n, 瓷器</p></details></li></ul><ul id="a65394d5-77a3-4657-9e3c-6ff18ee97131" class="block-color-gray_background toggle"><li><details open=""><summary>errand</summary><p id="04f54868-a70e-4d65-9638-5f2e613349d4" class="">/ˈerənd/</p><p id="22a061ea-7777-4475-a5b7-84969b292681" class="">n, a short journey in order to do something for someone, for example delivering or collecting something for them</p></details></li></ul><ul id="631e9c33-156f-4f58-9d5d-715ac56c880d" class="block-color-gray_background toggle"><li><details open=""><summary>moreover</summary><p id="eb5ae959-7a16-412b-87ec-8fb45dd174da" class="">adverb</p><p id="414d396c-458c-4632-979f-438f51ecddf7" class="">in addition – used to introduce information that adds to or supports what has previously been said</p><ul id="5fa6ecf0-8a73-40c8-92e6-1def092db451" class="bulleted-list"><li style="list-style-type:disc">Moreover is very formal. In everyday English, people use <strong><em>what’s more</em></strong> or <strong><em>also</em></strong> instead:<p id="0518d75e-707a-4e87-afc1-bdd6b61099fb" class="">e.g. The rent is reasonable and, what’s more, the location is perfect.</p></li></ul></details></li></ul><ul id="c6b760a6-c60a-4b52-963b-e5860ec2f74f" class="block-color-gray_background toggle"><li><details open=""><summary>novice</summary><p id="af09f17b-d72f-4da5-af69-093a47d484da" class="">n, 新手</p><p id="8695581a-909a-4f82-ab8a-f104408c89b9" class="">e.g. I&#x27;m a novice at these things.</p></details></li></ul><ul id="0effa568-6207-43d0-b177-b13033bc4b54" class="toggle"><li><details open=""><summary>puffery</summary><p id="ccad10ba-c07f-4361-861a-cd404ed1fdee" class="">n, the act of praising someone or something too much in a way that is not sincere</p><p id="14397b5c-6c73-4b12-a0cd-67d652982014" class="">e.g. His book avoids academic puffery and offers real insight.</p></details></li></ul><ul id="5c7c1f37-63cd-4b9a-a5a1-1a1fa7353e4b" class="toggle"><li><details open=""><summary>overwhelm</summary></details></li></ul><ul id="d98a6107-eb23-47e6-b5b6-5db32d8bc4a6" class="toggle"><li><details open=""><summary>vault</summary></details></li></ul><ul id="43a7fe47-3fed-44a4-a40b-fe7e681b1bb6" class="toggle"><li><details open=""><summary>strive / thrive</summary></details></li></ul><ul id="4f4e51df-53d1-4d05-bc2e-1a5a13bb0425" class="toggle"><li><details open=""><summary>legacy</summary></details></li></ul><ul id="3cbe64b8-be38-47dc-b65a-8e9dce99c888" class="toggle"><li><details open=""><summary>emerge</summary></details></li></ul><ul id="229e58e7-fe46-4289-ae3d-b90d5a931807" class="toggle"><li><details open=""><summary>encumbrance</summary></details></li></ul><ul id="01fe26b4-62b0-47db-8698-adba3a1d2dd8" class="toggle"><li><details open=""><summary>taxonomy</summary></details></li></ul><ul id="5da66730-2385-446e-af9a-a7de0bbde51a" class="toggle"><li><details open=""><summary>aggregate</summary></details></li></ul><ul id="14cb4b86-c56c-49db-a492-56c45dec4990" class="toggle"><li><details open=""><summary>ideology</summary><p id="cf28a8d8-87a7-4a86-8e0c-420ffe7d3a07" class="">n, 思想, 意识形态</p></details></li></ul><ul id="5b01fd78-d286-44f7-bf28-069a32a9d66f" class="toggle"><li><details open=""><summary>allusion / allegory</summary><p id="f9c9230e-8f1f-475b-98dd-be6ec127cbd0" class="">noun</p><ul id="e91859bc-d6ff-40ac-8dc7-27c640aa7ec3" class="bulleted-list"><li style="list-style-type:disc">allusion, 暗指, 映射<p id="30127e74-25c5-428e-bd4f-e611a3d64b6f" class="">An allusion is an indirect reference to someone or something.</p></li></ul><ul id="1d98b82d-adb1-4e76-b8a5-935c0b5d0ed8" class="bulleted-list"><li style="list-style-type:disc">allegory, 讽喻(寓言)</li></ul></details></li></ul><ul id="4fb69bba-89b6-4a23-a3e1-a0114bf0371f" class="toggle"><li><details open=""><summary>curate</summary><ol type="1" id="07007dbd-b71c-4b0a-9d2d-34abb7600d6b" class="numbered-list" start="1"><li>n, /ˈkjʊərət/<p id="b8c4bcc3-5244-4a21-b38b-0428b3c2173f" class="">a priest of the lowest rank, whose job is to help the priest who is in charge of an area</p></li></ol><ol type="1" id="55814c88-5b07-4158-bbee-686a3ba285b7" class="numbered-list" start="2"><li>v, /kjʊˈreɪt/<p id="8de840bf-4739-428c-8fda-c22e4f294e4c" class="">to choose and organize the art, music, objects etc for an exhibition, show, concert etc</p></li></ol></details></li></ul><ul id="45de1d12-bd0a-419e-b8cb-eb4c40b7ec92" class="toggle"><li><details open=""><summary>stutter</summary></details></li></ul><ul id="d777609b-20b6-4c20-a52f-4814f2343d2c" class="toggle"><li><details open=""><summary>parlor</summary><p id="61b5eb18-1009-4fde-9020-3d115e510420" class="">n, 客厅, 接待室</p></details></li></ul><ul id="ade2e236-2e5d-4711-a47e-7b093bfec9ce" class="toggle"><li><details open=""><summary>deliberate</summary></details></li></ul><ul id="9209ae0b-df22-4598-b1db-807c34d87369" class="toggle"><li><details open=""><summary>orchestrate</summary></details></li></ul><ul id="345ef975-2d26-47c6-9d3a-c6f1f23bb32f" class="toggle"><li><details open=""><summary>aisle</summary><p id="bcf457d1-05e8-4f85-b5d7-990dd1acaf1d" class="">n, /aɪl/ 过道</p><p id="26be71b1-6a4b-4081-9b75-faa1c70baf10" class="">座位间的过道; 超市货架间的过道</p></details></li></ul><ul id="9da81887-db05-4729-882a-12a3ff9eb63c" class="toggle"><li><details open=""><summary>remorse</summary></details></li></ul><ul id="2e82a980-9517-47f8-82e0-b39917703e0f" class="toggle"><li><details open=""><summary>legibility</summary><p id="8c704290-e148-4dda-b79e-025aaf936620" class="">n, 易读,易理解</p><p id="6be7b535-1d25-4f4e-b36c-d7dea17100d6" class="">e.g. Line breaks for legibility only.</p></details></li></ul><ul id="dfb367b6-4e1d-4c03-ace6-e63bc992d574" class="toggle"><li><details open=""><summary>intricate</summary><p id="505cbe81-71c4-4130-842e-bb17ba6f7240" class="">[ˈɪntrɪkət]</p></details></li></ul><ul id="35a341ca-eb80-44a0-a6ee-4a245adb20d4" class="toggle"><li><details open=""><summary>contrived</summary></details></li></ul><ul id="54017d17-bfd6-4966-990b-a4577af7a7b8" class="toggle"><li><details open=""><summary>benevolent</summary></details></li></ul><ul id="1e0a3d45-960d-475c-8976-820d472e5b6e" class="toggle"><li><details open=""><summary>ongoing</summary></details></li></ul><ul id="148622df-fbe3-466d-9b55-d6ae20fdbe0a" class="toggle"><li><details open=""><summary>interfere</summary></details></li></ul><ul id="3daf189f-d46a-4862-b5c2-93d18b27c4fc" class="toggle"><li><details open=""><summary>nuance</summary></details></li></ul><ul id="1870d703-657c-4c00-8855-5eb688860cb2" class="toggle"><li><details open=""><summary>distracted</summary></details></li></ul><ul id="c95497d2-75d4-4364-bafb-82ca78eb4201" class="toggle"><li><details open=""><summary>irritation</summary></details></li></ul><ul id="87707eac-894a-4369-ad81-a43bbcf06a84" class="toggle"><li><details open=""><summary>gullible</summary></details></li></ul><ul id="709a18e4-cc21-4535-9bc5-207d5c1075b6" class="toggle"><li><details open=""><summary>apparently</summary></details></li></ul><ul id="3a04b349-a77a-41c0-ac2e-b2a24d6ad410" class="toggle"><li><details open=""><summary>hesitant</summary></details></li></ul><ul id="87c7768f-fefe-4beb-948d-3a23c3795d42" class="toggle"><li><details open=""><summary>unbeknownst</summary></details></li></ul><ul id="c8c89dcd-8fa7-4aca-a037-6875ea654f89" class="toggle"><li><details open=""><summary>illicit</summary></details></li></ul><ul id="88fe1676-8e73-4a5c-b4ad-5a2caf2b4af0" class="toggle"><li><details open=""><summary>nefarious</summary></details></li></ul><ul id="c003a476-c5ea-41c9-8803-4da81669a35a" class="toggle"><li><details open=""><summary>reimburse</summary></details></li></ul><ul id="4b5ec0e7-34b9-47b9-a116-da1326732d9c" class="toggle"><li><details open=""><summary>eligible</summary></details></li></ul><ul id="fbe193bf-53c4-44e4-b14d-6c61455352c7" class="toggle"><li><details open=""><summary>qualify</summary></details></li></ul><ul id="eafc6ace-c822-496d-b60d-fd8bbdddee60" class="toggle"><li><details open=""><summary>obscure</summary></details></li></ul><ul id="9b1c6720-0028-4b72-b20d-6bdbe1acedda" class="toggle"><li><details open=""><summary>numb</summary></details></li></ul><ul id="64913548-6eca-449c-957c-d95903d2b403" class="toggle"><li><details open=""><summary>penetrate</summary></details></li></ul><ul id="ab669039-79ea-4966-810a-c751ed5cea78" class="toggle"><li><details open=""><summary>impersonator</summary></details></li></ul><ul id="0a4d9281-766e-413a-b68a-0279088889a4" class="toggle"><li><details open=""><summary>charge</summary></details></li></ul><ul id="8d7ed417-30d9-4c20-bb27-a259a7a86b58" class="toggle"><li><details open=""><summary>engage</summary></details></li></ul><ul id="40c8664d-b536-4d10-82d7-351868b9fd53" class="toggle"><li><details open=""><summary>squirt</summary></details></li></ul><ul id="b18e5ac7-aa82-4a17-9004-0758ed4651f9" class="toggle"><li><details open=""><summary>escalate</summary></details></li></ul><ul id="c5008700-ddee-4ac7-a8c1-245f6a51c0fa" class="toggle"><li><details open=""><summary>custody</summary></details></li></ul><ul id="31a7a502-b64e-4263-9ac2-cf5c2cc3195d" class="toggle"><li><details open=""><summary>scoop</summary></details></li></ul><ul id="93818bb2-2a89-4d02-8286-bd6cdf1e4090" class="toggle"><li><details open=""><summary>inflection</summary></details></li></ul><ul id="3f75f8e5-bcc9-4926-ab88-c566e1838fa3" class="toggle"><li><details open=""><summary>infection</summary></details></li></ul><ul id="b1a87720-2154-42fa-a773-ff0af5b423ab" class="toggle"><li><details open=""><summary>monologue</summary></details></li></ul><ul id="84655686-0b8e-4bf5-a9ab-96401050d715" class="toggle"><li><details open=""><summary>introspective</summary></details></li></ul><ul id="5c4440dd-0124-4910-9237-6448e5ba8995" class="toggle"><li><details open=""><summary>stray</summary></details></li></ul><ul id="242464ae-d7df-4526-9721-6f61adac49b4" class="toggle"><li><details open=""><summary>superstitious</summary></details></li></ul><ul id="a5c693a5-1a43-4133-b960-4c19a1372430" class="toggle"><li><details open=""><summary>overheard</summary></details></li></ul><ul id="88445ccb-1a7e-4596-abb0-5f60f30faafe" class="toggle"><li><details open=""><summary>preliminary</summary></details></li></ul><ul id="987b48c5-d9df-4380-aebf-3a74ad490374" class="toggle"><li><details open=""><summary>phenomenal</summary></details></li></ul><ul id="364fb464-bc3c-4c3e-8b70-878586ed730b" class="toggle"><li><details open=""><summary>trauma</summary></details></li></ul><ul id="5fb8be9e-a67d-4db8-bd09-e3aad754d324" class="toggle"><li><details open=""><summary>apparition</summary></details></li></ul><ul id="6a1005da-ecba-4f95-877c-0dcb825f0ef7" class="toggle"><li><details open=""><summary>bizarre</summary></details></li></ul><ul id="aa326bae-6891-4d17-8501-d7e4162cfa8f" class="toggle"><li><details open=""><summary>voluntary vs compulsory</summary><p id="d775a0d0-6429-4938-9956-bb55d374f17c" class="">voluntary / compulsory redundancy</p></details></li></ul><ul id="6646e4ed-0c93-4fea-8f2e-bc9f85c8035b" class="toggle"><li><details open=""><summary>pseudonym</summary></details></li></ul><ul id="aa200726-5a99-4801-8cba-16e354ecdc5c" class="toggle"><li><details open=""><summary>stumble</summary></details></li></ul><ul id="089e47fa-9e71-41b2-8826-a9eb2800b8fa" class="toggle"><li><details open=""><summary>hysterics</summary></details></li></ul><ul id="5323c42f-d6d8-429c-8a2c-a319402668f0" class="toggle"><li><details open=""><summary>excess</summary></details></li></ul><ul id="2fe6ec5f-b68e-4b2b-833a-a855902a31ab" class="toggle"><li><details open=""><summary>breach</summary></details></li></ul><ul id="78fa8ae3-613b-47f1-a43a-fda89ffb1e28" class="toggle"><li><details open=""><summary>lurk</summary></details></li></ul><ul id="f819b619-f917-40fa-bb30-8fc28ac647cf" class="toggle"><li><details open=""><summary>elite</summary></details></li></ul><ul id="8195c898-2c0f-469d-98d7-255543c45c16" class="toggle"><li><details open=""><summary>turnover</summary></details></li></ul><ul id="3123ac1d-7805-4d9f-8e2b-c87d224dbae0" class="toggle"><li><details open=""><summary>provided</summary></details></li></ul><ul id="f75f478b-0aa0-4d01-be8d-be78cb8480b9" class="toggle"><li><details open=""><summary>radically</summary></details></li></ul><ul id="53c83f2b-d88c-4f58-8681-d49f3017fca2" class="toggle"><li><details open=""><summary>culprits</summary></details></li></ul><ul id="60d9b98d-0d78-4b9c-8073-42511483a3d6" class="toggle"><li><details open=""><summary>perpendicular</summary></details></li></ul><ul id="bc97cd6c-8f24-4bbc-a4ad-a2861a440d2b" class="toggle"><li><details open=""><summary>substantial</summary></details></li></ul><ul id="3dae3266-8bfc-42d2-8201-d289b2d6ea56" class="toggle"><li><details open=""><summary>obsess</summary></details></li></ul><ul id="f75dbbd6-a1cc-4021-9bdc-85e4c9bfb099" class="toggle"><li><details open=""><summary>esoteric</summary></details></li></ul><ul id="af0990ee-3a4a-453a-b719-311fcf4cd91c" class="toggle"><li><details open=""><summary>viable</summary></details></li></ul><ul id="9d7fb6c8-43d9-472a-a6e2-f928a6569e06" class="toggle"><li><details open=""><summary>comprise</summary></details></li></ul><ul id="6fdb2f92-68da-4ff8-9c7d-c970e083f3bf" class="toggle"><li><details open=""><summary>circa</summary></details></li></ul><ul id="e808c27e-79b7-4cca-9b59-267f99e93cda" class="toggle"><li><details open=""><summary>canonical</summary></details></li></ul></div><div id="c8b7416b-b81e-478d-b041-6af61c9f2c9e" style="width:68.75%" class="column"><h2 id="1bde3bda-200f-4a51-bdaa-1644da7bc6a2" class="block-color-purple_background">more than one</h2><ul id="8ed689d3-c38e-4de7-8bea-1bd83cb78878" class="block-color-gray_background toggle"><li><details open=""><summary>for instance</summary><p id="02e0fe90-35ba-4097-b522-42bd80efee6a" class="">for example</p></details></li></ul><ul id="6cebf632-d46b-439e-b1c8-f8052aa7315e" class="block-color-gray_background toggle"><li><details open=""><summary>hang round, hang around, hang about</summary><ul id="ed06cc13-b07d-4507-83f3-68030ad2b9e1" class="bulleted-list"><li style="list-style-type:disc">hang around/round/about (something)<p id="9d9f3a34-ee3f-4134-9d8b-a17bc604637a" class="">to wait or spend time somewhere, doing nothing</p></li></ul><ul id="c9eb9037-1bb4-43f9-b61a-1a8a297062e5" class="bulleted-list"><li style="list-style-type:disc">hang about<ol type="1" id="f524ca69-468a-4fd5-893b-3e63e8e07259" class="numbered-list" start="1"><li><em>spoken</em> to move slowly or take too long doing something<p id="8cd46a23-4e6f-4c32-8faa-55765ab4f1eb" class="">e.g. Come on, we haven’t got time to hang about!</p></li></ol><ol type="1" id="5b6e533a-84f5-42d6-a725-5ecfe00081a1" class="numbered-list" start="2"><li>used when you have just noticed or thought of something that is interesting or wrong<p id="4a55a9d0-992b-4b59-993f-3edd1472bf6e" class="">e.g. Hang about – that can’t be right.</p></li></ol><ol type="1" id="7d82cb03-0cd1-4e1b-a54e-948e70318db9" class="numbered-list" start="3"><li>used to ask someone to wait or stop what they are doing</li></ol></li></ul><p id="e719281f-d7a5-4651-9017-04ca47d5a982" class="">
+</p></details></li></ul><ul id="b8e70c07-10ae-4b87-96b1-9953172416ca" class="block-color-gray_background toggle"><li><details open=""><summary>rule of thumb</summary><p id="a8bd9b65-4b31-4992-9b49-dc65ba9f0666" class="">a rough figure or method of calculation, based on practical experience</p><p id="8a99f302-a64d-42ba-837c-6ad05156cabb" class="">e.g. As a general rule of thumb, children this age should not spend more than one hour on homework.</p></details></li></ul><ul id="f7b82cc4-d860-4cc6-a38a-b65b1b5d8dd5" class="toggle"><li><details open=""><summary>fill out</summary><ol type="1" id="03dfc0c0-9a31-4bee-9771-8d1cc6685a0a" class="numbered-list" start="1"><li>填写(表格等)</li></ol><ol type="1" id="88ce2e42-3a1b-4cc9-a995-6accd0002576" class="numbered-list" start="2"><li>长胖 e.g. Eric has filled out around the waist.</li></ol><ol type="1" id="a149089c-e49b-443f-85e2-9184975bc476" class="numbered-list" start="3"><li>if a young person fills out, their body becomes more like an adult’s body, for example by having bigger muscles, developing breasts, etc.<p id="0753e738-d4b7-4a73-ad62-6586844361bd" class="">e.g.</p><p id="3bae8882-8eed-4cb3-8acb-53bd0fcfe904" class="">At puberty, a girl’s body begins to fill out.</p></li></ol></details></li></ul><ul id="494bf134-0644-47f3-aaea-6b09e0bcabc9" class="toggle"><li><details open=""><summary>in this respect</summary><p id="afec4a99-2734-4ce8-8546-8393f453f50d" class="">在这方面</p></details></li></ul><ul id="7cad4bb3-b176-49a1-ae64-89e812f98487" class="toggle"><li><details open=""><summary>jumping-off point</summary><p id="dd69cbf1-4829-4065-b648-61a45628e01a" class="">A <em><strong>jumping-off point</strong></em> or a <em><strong>jumping-off place</strong></em> is a place, situation, or occasion which you use as the starting point for something.</p></details></li></ul><ul id="40f203f0-d973-4fa5-b2bd-b2b919a305cb" class="toggle"><li><details open=""><summary>beyond that</summary><p id="a1b49a63-030d-47e1-8176-c9a7b9eb7134" class="">除此之外</p></details></li></ul><ul id="354760be-6d1e-4ce4-95cd-73adf273e61c" class="toggle"><li><details open=""><summary>the world is your oyster</summary></details></li></ul><ul id="1cffa7fb-60b4-45db-aad8-5e3bd4a4712d" class="toggle"><li><details open=""><summary>stumble over</summary></details></li></ul><ul id="e29b2887-f722-4b83-aa40-48e18d2fa835" class="toggle"><li><details open=""><summary>LMAO</summary><p id="90040b94-0047-42db-98f0-85efe50d4271" class="">laughing my ass off</p></details></li></ul><ul id="003d0ae4-ebbb-4e4c-8e34-3baad679a76b" class="toggle"><li><details open=""><summary>hit the road</summary><p id="5cfa3f9d-f455-48f2-9e55-37f951eeafc4" class="">出发</p><p id="e2471d78-ba83-4549-b505-ac99f0e6f2e3" class="">e.g. We&#x27;d better<strong> hit the road</strong> bacause it&#x27;s getting dark.</p></details></li></ul><ul id="fbd0c87a-c692-40a9-bb8f-79828a2a8535" class="toggle"><li><details open=""><summary>hit up someone</summary><p id="cf49b527-297a-4f50-9693-aa452799ad0d" class="">找某人帮忙,若someone 是代词,要放在 up 的前面.</p><p id="e27739ce-d2d3-4f33-b190-8a5aa95d2e1c" class="">e.g. If you need any help, hit me up.</p></details></li></ul><ul id="181559c7-190b-463a-bca9-485377246f23" class="toggle"><li><details open=""><summary>show off</summary><p id="be9fcd98-668b-472d-a442-a3ff3421b2c6" class="">炫耀</p><p id="28ebdf11-9a10-4855-b45a-c20611cfb04d" class="">e.g. Nick was showing off all the time and looking down on people sometimes.</p></details></li></ul><ul id="6f24fca3-274a-44c6-8eb3-79ece68deda2" class="toggle"><li><details open=""><summary>show up</summary><p id="03e0213b-8edc-4014-8376-ad7f6525d402" class="">出现; 到场</p><p id="488b6661-af2b-42fd-a841-a08c294df23e" class="">e.g. You didn&#x27;t show up at the meeting this morning.</p></details></li></ul><ul id="6b6d6701-ea0b-493a-9167-b2befc66a002" class="toggle"><li><details open=""><summary>give out</summary><p id="db10b51d-6270-4267-b017-ade0b51e1bf4" class="">停止运作; 出故障</p><p id="aab4ccfc-1be8-4fb8-b69a-bb8431adcaaa" class="">e.g. My car engine gave out yesterday.</p></details></li></ul><ul id="8b7833f3-79b2-418a-8327-36a6da49e7db" class="toggle"><li><details open=""><summary>give off</summary><p id="3d57ed1b-45cc-48aa-8c8c-9a6cc261ba64" class="">散发出; 放出</p><p id="fc70755c-721c-474a-95dc-9fbd7a630198" class="">e.g. Those flowers give off a kind of sweet smell.</p></details></li></ul><ul id="4547b754-fbe1-4024-86f7-1d21b862a9bb" class="toggle"><li><details open=""><summary>beat around the bush</summary><p id="b9f1b861-16f7-4ee5-9187-b94d2fd99f4d" class="">拐弯抹角</p><p id="5087532c-e00c-4a3b-a261-9e089723e74c" class="">e.g. Don&#x27;t beat around the bush. Do you want to buy those flowers or not ?</p></details></li></ul><ul id="0daff7f9-05a7-4a41-90e9-3dc3e3cf1b4e" class="toggle"><li><details open=""><summary>beat sb to sth</summary><p id="b6cf8f89-ebf9-401c-9858-636fc7520538" class="">比某人早一步做某事</p><p id="bab7b3e6-063a-48fd-abea-3d17f06cfc2c" class="">e.g. All my coworkers beat me to the office this morning.</p></details></li></ul><ul id="f2e618d5-babc-484d-b1a9-35c4aaa19d6a" class="toggle"><li><details open=""><summary>beat oneself up</summary><p id="41807709-523e-494b-a149-b3040b244716" class="">自责</p><p id="81cde145-10a8-4178-bd81-230a1280cab4" class="">e.g. Don&#x27;t beat yourself up. It&#x27;s just a small mistake.</p></details></li></ul><ul id="4a988256-bd20-48a3-a80c-9c45ae777614" class="toggle"><li><details open=""><summary>pass out</summary><p id="05091a85-c589-426a-b6c7-d4d778a4d655" class="">昏倒</p><p id="040869aa-bb23-4aeb-9446-ebd3ad1abe3d" class="">e.g. He was passing out when he fell off the stairs.</p></details></li></ul><ul id="43a50d32-a342-4b05-8637-0ef150414501" class="toggle"><li><details open=""><summary>take a rain check</summary><p id="7a5610e2-9adf-4837-a60a-cfe25adc5ccf" class="">改天; 下次</p></details></li></ul><ul id="4a2a3b49-11b8-4afe-8612-30eee45a0c0b" class="toggle"><li><details open=""><summary>out of the blue</summary><p id="0ccb3d3c-6db4-4cc2-9c0f-44fea9bac6db" class="">Out of the blue, she started to cry.</p></details></li></ul><ul id="c42eea08-1bed-46f7-a110-dd14aa1347a0" class="toggle"><li><details open=""><summary>drive someone nuts</summary><p id="3df310c3-0743-4b9f-ae92-2e5b4128fe69" class="">All these phone calls are driving me nuts.</p></details></li></ul><ul id="fc2ffe9b-b2fd-4361-9138-517a569d187e" class="toggle"><li><details open=""><summary>keep a low profile</summary><p id="6038920e-c0fa-4685-9d94-2abc4fda6242" class="">(to avoid attracting attention to yourself) 保持低调</p><p id="291dd05b-20cf-4433-a5f7-f811791d049b" class="">He&#x27;s been in a little trouble recently so he&#x27;s trying to keep a low profile</p></details></li></ul><ul id="bab1818c-36b7-42b6-8781-d4144e042a5e" class="toggle"><li><details open=""><summary>lose track of time</summary><p id="da282d17-0f3b-495f-8861-77f20567f483" class="">I enjoyed our conversation so much, I lost track of time and was late to work.</p></details></li></ul><ul id="52de6fd6-e031-4d28-96dd-2b29712deaea" class="toggle"><li><details open=""><summary>for old time&#x27;s sake</summary></details></li></ul><ul id="aff8d5de-6d87-47f6-8b5f-db0550b9603a" class="toggle"><li><details open=""><summary>It&#x27;s being called...</summary></details></li></ul><ul id="92359412-c3fa-432a-bb64-37c03ae64bf0" class="toggle"><li><details open=""><summary>Scammers lined up to take advantage of this.</summary></details></li></ul><ul id="e9e943d7-a325-4bfa-a88b-6107278d39e1" class="toggle"><li><details open=""><summary>I was under the impression that...</summary></details></li></ul><ul id="a86efb53-2961-4765-87a1-b8da2010c7e4" class="toggle"><li><details open=""><summary>run of the mill</summary></details></li></ul><ul id="2ee212ce-0d6d-4799-8f5e-2620d3359140" class="toggle"><li><details open=""><summary>at face value</summary><p id="5325be48-750d-420e-8adb-94d2ca47795d" class="">Don&#x27;t take an advertisement at face value.</p></details></li></ul><ul id="02cedebc-668a-4b5d-98ce-bba3186776ba" class="toggle"><li><details open=""><summary>get around</summary></details></li></ul><ul id="eff9bc85-a736-4a72-8424-98e88399e750" class="toggle"><li><details open=""><summary>go around/round</summary><ol type="1" id="8cfde936-0cb4-4024-9afd-7459e57f9579" class="numbered-list" start="1"><li>to behave or dress in a particular way<p id="5847c69f-8878-403a-aa26-0b4404353696" class="">e.g. You can’t go around accusing people like that.</p><p id="969486f7-036c-494d-8196-2b7bf3fbeeaa" class="">e.g. He goes around in a T-shirt even in winter.</p></li></ol><ol type="1" id="6c3e3a6f-cd10-4fb8-b5e8-903602a87098" class="numbered-list" start="2"><li>enough for each person<p id="bd7ef789-1c7a-46dd-9548-a78c7a3f3d56" class="">e.g. Is there enough ice cream to go around?</p></li></ol><ol type="1" id="e8077be3-e08e-419f-8940-16c463c2e9a5" class="numbered-list" start="3"><li>go around with sb<p id="eb652feb-9da8-4c17-8ca9-c724675275d3" class="">to meet someone often and spend a lot of time with them</p><p id="cc669b82-4b51-459d-b1c2-34eb462e9e60" class="">e.g. I used to go around with a bad crowd.</p></li></ol><ol type="1" id="837fd008-3dfb-47d6-a8d6-b45e6a513d4f" class="numbered-list" start="4"><li>go around in circles<p id="67601bba-9684-45cc-9c37-0b3a4c6b7dfd" class="">to think or argue about something without deciding anything or making progress</p></li></ol><ol type="1" id="54f2baa5-c5ad-4370-9d1a-c68c7115ccba" class="numbered-list" start="5"><li>go around in your head<p id="7622b2cc-d17c-44bb-9074-f11b0028eaa6" class="">if words, sounds, etc go around in your head, you keep remembering them for a long time.</p></li></ol><ol type="1" id="cd6ca69b-615a-4467-9e12-950d53817e93" class="numbered-list" start="6"><li>visit sb in their home<p id="26ee0888-824f-4b22-b48d-a445ea81d16c" class="">e.g. I’m just going around to Martha’s for an hour.</p></li></ol></details></li></ul><ul id="af5c4d02-32df-449f-9a71-0d33cbd2e08b" class="toggle"><li><details open=""><summary>of value</summary></details></li></ul><ul id="3a022349-6200-492b-966d-8bf43acd2d10" class="toggle"><li><details open=""><summary>go about</summary></details></li></ul><ul id="3a0b363c-2fbd-4881-9044-fd663aa7cafa" class="toggle"><li><details open=""><summary>take place</summary></details></li></ul><ul id="0fddd761-3481-441e-ad50-fc5bb2ff92c2" class="toggle"><li><details open=""><summary>have to do with</summary></details></li></ul><ul id="746b4d2f-4267-484a-b38f-2c460658164f" class="toggle"><li><details open=""><summary>snap out of it</summary></details></li></ul><ul id="5b42a2ea-9ed8-44bf-a52d-1e80f87ab650" class="toggle"><li><details open=""><summary>be a matter of opinion</summary></details></li></ul><ul id="d774274b-e6e1-4b95-8fc2-70f695e958fd" class="toggle"><li><details open=""><summary>be a matter of principle</summary></details></li></ul><ul id="6c3a6a47-45bd-4245-b835-9c52661e352b" class="toggle"><li><details open=""><summary>concern yourself with/about something</summary></details></li></ul><ul id="8a9b9628-ff65-46b3-8e7f-19902a50bd63" class="toggle"><li><details open=""><summary>every once in a while</summary><p id="7e59f89d-8850-4761-ba0d-73df9c4218fe" class="">sometimes but not often; from time to time; occasionally</p><p id="cf6f1aa1-1917-4b3a-a7a2-27a986f898d7" class="">e.g. We still meet each other every once in a while.</p></details></li></ul><ul id="6300cd9a-bbf2-4b20-9b93-c9d8823deba2" class="toggle"><li><details open=""><summary>wipe out</summary></details></li></ul><ul id="567573b7-a905-4e54-bab6-42e691dfab6e" class="toggle"><li><details open=""><summary>run late</summary><p id="e20a3354-5a48-44c0-ad09-851e01defee6" class="">e.g. I have to hurry. I’m running late.</p><p id="786535ce-1633-4deb-b19d-b3796996cef0" class="">e.g. The buses are running late.</p></details></li></ul><ul id="f3351f68-8e64-4aa3-9c4c-7f6bc91e0318" class="toggle"><li><details open=""><summary>up to</summary><p id="ba8bf89c-554f-48ff-b892-3b91f95d513c" class="">e.g. Where have you got up to in the story?</p><p id="51e6b3ee-1449-4496-82a5-64be730f6b10" class="">e.g. I could reach just up to his waist.</p><p id="09be3f54-e674-4f5c-b6e9-ca07357944e7" class="">e.g. The process is expected to take up to two years. </p></details></li></ul><ul id="2553fd1f-df73-4edc-a4d1-6fbc8a920005" class="toggle"><li><details open=""><summary>be up to sth</summary><p id="2b6f58cc-2c8b-4fe3-b415-f74e7a2b279a" class=""><strong>to be doing something, often something bad or illegal, usually secretly</strong></p></details></li></ul><ul id="fd5820f5-dc6d-4b9d-bb1b-bc81a7425f08" class="toggle"><li><details open=""><summary>get up to sth</summary><p id="03887f0a-0a8c-49f9-9d31-f45d1f9e2689" class=""><strong>to do something, often something that other people would disapprove of</strong></p></details></li></ul><ul id="f6157890-89b2-44c7-b14d-3223c08319fa" class="toggle"><li><details open=""><summary>for sale / on sale</summary><p id="a5b998d4-b9d6-4630-9791-2610d0417c04" class="">for sale → available to purchase</p><p id="bb669320-ad6e-44fc-b703-05203632c84c" class="">on sale → 1. for sale 2. available to purchase at a lower price</p></details></li></ul><ul id="c35c358a-964d-4ee8-bee5-935c97f71d04" class="toggle"><li><details open=""><summary>in the sale(s)</summary><p id="16d03c2c-0680-46c7-bf5a-156db57ddd9d" class="">available to purchase at a reduced price.</p><p id="9d125fed-021d-4449-9b29-0c258a4feb11" class="">e.g. It’s a lovely coat, and I managed to get it cheap in the sales.</p></details></li></ul><ul id="e3414461-6ee7-45d5-aa71-f5e12cf099f5" class="toggle"><li><details open=""><summary>sweep someone off someone’s feet</summary><p id="9e49d962-eda7-4d04-9b2c-e5d39744c6f4" class="">e.g. She says that he swept her off her feet, and they were married six months later.</p></details></li></ul><ul id="8bc7c6dc-f319-4977-afe2-69930719054c" class="toggle"><li><details open=""><summary>brand-new</summary><p id="ca183791-1a23-476c-9131-ba34abbfff5f" class="">new and not yet used; completely new</p></details></li></ul><ul id="5d7506fd-8bb0-434c-b320-1707a19f85fc" class="toggle"><li><details open=""><summary>a long way off</summary><p id="2a7633d8-aeb8-4046-8d4f-f3985abc3bec" class="">Any kind of peace agreement still seems a long way off.</p></details></li></ul><ul id="64e36de2-e943-45a1-b94d-e51de716cf06" class="toggle"><li><details open=""><summary>have it in you</summary><p id="b85a681d-503e-4538-b42b-dffccb285a94" class="">You should have seen the way Dad was dancing – I didn’t know he had it in him!</p></details></li></ul><ul id="e452667d-fd13-44d8-9273-96a0b3e1b652" class="toggle"><li><details open=""><summary>step into the breach</summary><p id="e3bd6863-5cac-4009-b796-52bdb1084790" class="">Gail&#x27;s sudden illness meant that Kathy had to step into the breach.</p></details></li></ul><ul id="b48c6f77-cc7e-4164-9bd9-96e8c11ae870" class="toggle"><li><details open=""><summary>track of time</summary><p id="327eda13-6e77-4ed8-b90c-eeb36e8ffce9" class="">e.g. You should remind Jess to be punctual because she always loses track of time.</p></details></li></ul><ul id="79f197f5-a8dd-412b-b8da-515ee34b86f1" class="toggle"><li><details open=""><summary>the wrong way up</summary><p id="ad8418f7-1f6b-4a8a-b923-894a26bacba8" class="">e.g. The painting was hung the wrong way up.</p></details></li></ul><ul id="8523d182-3bd1-4e20-9675-26ba9373c1dd" class="toggle"><li><details open=""><summary>up for something</summary><p id="4eb6a093-695a-4956-8260-7fcf85887b6d" class="">e.g. The car is up for sale.</p><p id="2582fd5b-9ff2-4c0f-8441-de399de3648f" class="">e.g. She is up for promotion.</p><p id="9f66abc5-72e2-4c83-87e1-4bc881243c1c" class="">e.g. “We’re going to the bar for a drink.”—” Are you up for it?”</p><p id="4bacd134-ac0c-40a9-acda-d0534b6d5dc9" class="">e.g. The contract comes up for renewal next year.</p></details></li></ul><ul id="5a7d549c-c710-4582-9fd3-e9aaf9ba8fe8" class="toggle"><li><details open=""><summary>come up to</summary><p id="aece80d9-4cf9-4f4e-b368-569f1243f532" class="">e.g. She came up to me and asked for money.</p><p id="44292a7c-711c-4b61-bd0e-5013b8f0e3b1" class="">e.g. The water came up to the level of the window.</p></details></li></ul><ul id="1f7f90d1-d71a-422b-acb6-85740a19a2c0" class="toggle"><li><details open=""><summary>come complete with</summary><p id="71bc2167-ca01-46f4-852b-20b7c47132d1" class="">e.g. The house comes complete with swimming pool and sauna.</p><p id="fc5876c8-16ac-4d4f-acb7-9c878c556ce3" class="">e.g. The computer comes complete with software and games.</p></details></li></ul><ul id="a42644cf-b801-460f-bae2-2c59c87f87dd" class="toggle"><li><details open=""><summary>pick out</summary><p id="4a41fee6-b1e7-4152-9f21-a14c0be7e6db" class="">e.g. See if you can pick me out in this photo.</p></details></li></ul><ul id="8a28b7f0-289a-4b93-8539-2cd2ad8953d6" class="toggle"><li><details open=""><summary>on a first-name basis</summary></details></li></ul><ul id="126f4a3a-771a-43d9-8ee3-2eca7f034d42" class="toggle"><li><details open=""><summary>bump up</summary></details></li></ul><ul id="1344bbc2-d36a-4709-875e-7b46d7d5174d" class="toggle"><li><details open=""><summary>rip off</summary></details></li></ul><ul id="4c47c182-e18b-453d-a26f-91b4e617f149" class="toggle"><li><details open=""><summary>hot chick</summary></details></li></ul><ul id="5fdab02a-8cab-487b-ade8-d6cffadd0802" class="toggle"><li><details open=""><summary>referred to as</summary></details></li></ul><ul id="a7c8b0c2-5ff6-467e-ae1a-97ac62824133" class="toggle"><li><details open=""><summary>the sheer number of</summary><p id="65caa1db-ba61-493b-ba29-7d9621c98f80" class="">
+</p></details></li></ul><ul id="ceeab087-2649-4dd4-8f07-4f1c8895e27f" class="toggle"><li><details open=""><summary>coupled with</summary><p id="2af730f3-d78c-4194-807d-80c98694ef0c" class="">e.g. The team&#x27;s win, <em>coupled with</em>
+ a loss by their rivals put them in first place.</p></details></li></ul><ul id="e42b3f05-1419-4055-9ded-1cd2ccf42ac5" class="toggle"><li><details open=""><summary>work on</summary></details></li></ul><ul id="3698b727-2837-4ca0-9c48-d2599c49242e" class="toggle"><li><details open=""><summary>unless otherwise</summary></details></li></ul><ul id="9f5b055d-8222-4a93-ba0c-7253844ce54e" class="toggle"><li><details open=""><summary>out of place</summary></details></li></ul><ul id="d22a97f8-04c9-47ae-90c7-a535e324e899" class="toggle"><li><details open=""><summary>set aside</summary></details></li></ul><ul id="b1c9d546-451a-478c-a471-1f399906d5b7" class="toggle"><li><details open=""><summary>as needed</summary></details></li></ul><ul id="503bd935-eeef-471f-ab9d-f77d3fe715d8" class="toggle"><li><details open=""><summary>keep an eye out for</summary></details></li></ul><ul id="a179fc2f-7da6-4517-bcbe-bd28fdd9b2e6" class="toggle"><li><details open=""><summary>look out for</summary></details></li></ul><ul id="3e1b5b7c-c2bc-4dcf-b058-e8c4d82e3ca3" class="toggle"><li><details open=""><summary>more often than not</summary></details></li></ul><p id="aca30c24-58a1-4485-8323-0905a6996d04" class="">just for test, add notion_file_token.</p><p id="79810eb7-ac76-4c3c-9be0-24947426f5e7" class="">
+</p></div></div><ul id="d2faeac6-45da-48b4-ab91-ca6d80024cd7" class="toggle"><li><details open=""><summary>remainder</summary></details></li></ul><ul id="7329ec96-bf5c-485b-91ab-a6ca9422f3f8" class="toggle"><li><details open=""><summary>compensate</summary><p id="31d9e6bf-e6bc-448c-a777-9a2b937424ad" class="">compensate for</p></details></li></ul><ul id="cbc7726e-5cb1-474e-9c8e-89e977937f11" class="toggle"><li><details open=""><summary>infringement</summary></details></li></ul><ul id="9161b25a-205e-4e20-a557-4c087fb0a6e5" class="toggle"><li><details open=""><summary>discrete</summary></details></li></ul><ul id="5385b982-eadf-446b-aa9b-c4900cb1f472" class="toggle"><li><details open=""><summary>bottleneck</summary></details></li></ul><ul id="042d081a-db55-4ce3-bb79-701c4b45a708" class="toggle"><li><details open=""><summary>regulate</summary></details></li></ul><ul id="a2deea84-4904-42ec-b15d-14bc740a0be6" class="toggle"><li><details open=""><summary>simultaneously</summary></details></li></ul><ul id="62bacada-56cd-4f82-b256-b6d23b576361" class="toggle"><li><details open=""><summary>furthermore</summary></details></li></ul><ul id="4a02fc9b-41e8-4d8e-a144-a3b9ed937b17" class="toggle"><li><details open=""><summary>negligible</summary></details></li></ul><ul id="51c14c57-8313-4272-81db-9d358d0185a3" class="toggle"><li><details open=""><summary>miniscule</summary></details></li></ul></div></article></body></html>
