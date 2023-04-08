@@ -15,7 +15,7 @@ jobs:
   backup:
     runs-on: ubuntu-latest
     name: Backup
-    timeout-minutes: 
+    timeout-minutes: 15
     permissions: write-all
 
     steps:
