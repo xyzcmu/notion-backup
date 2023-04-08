@@ -16,8 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Backup
     timeout-minutes: 15
-    permissions: 
-      contents: write
+    permissions: write-all
 
     steps:
       - uses: actions/checkout@v2
