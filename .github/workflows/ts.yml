@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Backup
     timeout-minutes: 15
-    permissions: write-all
+    #permissions: write-all
     steps:
       - uses: actions/checkout@v2
 
@@ -75,7 +75,7 @@ jobs:
           -d "$data" \
           https://api.github.com/repos/xyzcmu/notion-backup/releases
         env:
-          token: ${{github.token}}
+          token: ${{secrets.PAT}}
 
       - name: generate releases-id-tag.txt
         if: steps.isRlease.outputs.result == 'true'
@@ -117,7 +117,7 @@ jobs:
           rm html.zip.enc markdown.zip.enc
         env:
           passwd: ${{secrets.ENC_PASSWD}}
-          token: ${{github.token}}
+          token: ${{secrets.PAT}}
       
       - name: retain three releases-id-tag
         if: ${{steps.rls-id-tag.outputs.rls_total > 3}}
@@ -147,7 +147,7 @@ jobs:
           echo "tag: ${rls_tag} deleted"
           done <<< $(cat del-releases-id-tag.txt | awk '{print $2}')
         env:
-          token: ${{github.token}}
+          token: ${{secrets.PAT}}
 
       - name: clean
         run: |
