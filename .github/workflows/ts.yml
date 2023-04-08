@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Backup
     timeout-minutes: 15
-    permissions: write-all
     steps:
       - uses: actions/checkout@v2
 
@@ -61,7 +60,7 @@ jobs:
           echo "result=false" >> $GITHUB_OUTPUT
           fi
           echo $cur_size > notes-size.txt
-          
+
       - name: create a release
         if: steps.isRlease.outputs.result == 'true'
         run: |
