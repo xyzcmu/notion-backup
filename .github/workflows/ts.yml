@@ -90,6 +90,7 @@ jobs:
           total=$(cat releases-id-tag.txt | wc -l)
           echo "<====== releases total: ${total} ======>"
           echo "rls_total=${total}" >> $GITHUB_OUTPUT
+          
       - name: encrypt and upload assets to latest-release
         if: steps.isRlease.outputs.result == 'true'
         run: |
