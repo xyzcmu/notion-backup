@@ -1,1 +1,1 @@
-# ts_notion_backup
+# notion_backup
